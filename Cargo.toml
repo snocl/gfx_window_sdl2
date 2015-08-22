@@ -2,6 +2,10 @@
 name = "gfx_window_sdl2"
 version = "0.1.0"
 authors = ["snorr <snorredc@gmail.com>"]
+description = "Use gfx rendering with SDL2 windows"
+repository = "https://github.com/snorr/gfx_window_sdl2"
+keywords = ["SDL", "gamedev", "gfx", "graphics"]
+license = "MIT"
 
 [dependencies]
 gfx = "0.6"
