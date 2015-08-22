@@ -1,0 +1,9 @@
+[package]
+name = "gfx_window_sdl2"
+version = "0.1.0"
+authors = ["snorr <snorredc@gmail.com>"]
+
+[dependencies]
+gfx = "0.6"
+gfx_device_gl = ">=0.3.1"
+sdl2 = "0.8"
