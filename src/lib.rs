@@ -21,8 +21,8 @@ pub struct Output<R: gfx::Resources> {
     pub context: GLContext,
     frame: gfx::handle::FrameBuffer<R>,
     // In `gfx_window_{glutin,glfw}` mask and gamma values are also stored.
-    // Here we instead rely on the (hopefully sane) default implementations
-    // of `gfx::Output::{get_mask,get_gamma}`.
+    // Here we instead rely on the (hopefully sane) default implementation
+    // of `gfx::Output::get_gamma` and just pass along a constant mask.
 }
 
 impl<R: gfx::Resources> gfx::Output<R> for Output<R> {
@@ -33,6 +33,11 @@ impl<R: gfx::Resources> gfx::Output<R> for Output<R> {
     fn get_size(&self) -> (Size, Size) {
         let (w, h) = self.window.drawable_size();
         (w as Size, h as Size)
+    }
+    
+    // Not implementing `get_mask` causes panics when calling `clear`.
+    fn get_mask(&self) -> gfx::Mask {
+        gfx::COLOR | gfx::DEPTH | gfx::STENCIL
     }
 }
 
