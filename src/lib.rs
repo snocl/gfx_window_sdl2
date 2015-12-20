@@ -59,7 +59,7 @@ pub type Stream = gfx::OwnedStream<Device, Output<Resources>>;
 pub fn init(window: Window) -> (Stream, Device, Factory) {
     let context = window.gl_create_context().unwrap();
     let (device, mut factory) = gfx_device_gl::create(|s| {
-        window.subsystem().gl_get_proc_address(s)
+        window.subsystem().gl_get_proc_address(s) as *const _
     });
     let out = Output {
         window: window,

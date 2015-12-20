@@ -8,6 +8,6 @@ keywords = ["SDL", "gamedev", "gfx", "graphics"]
 license = "MIT"
 
 [dependencies]
-gfx = "0.6"
-gfx_device_gl = ">=0.3.1"
-sdl2 = "0.8"
+gfx = "0.8.1"
+gfx_device_gl = "0.7.0"
+sdl2 = "0.12.1"
