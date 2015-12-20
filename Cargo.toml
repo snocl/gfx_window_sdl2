@@ -1,6 +1,6 @@
 [package]
 name = "gfx_window_sdl2"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["snorr <snorredc@gmail.com>"]
 description = "Use gfx rendering with SDL2 windows"
 repository = "https://github.com/snorr/gfx_window_sdl2"
